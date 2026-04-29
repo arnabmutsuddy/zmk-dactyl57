@@ -13,14 +13,13 @@
      keymap {
          compatible = "zmk,keymap";
  
-         // TODO: SWAP SHIFTED KEYS SOMEHOW
          default_layer {
  // ------------------------------------------------------------------------------------------------------------
  // |  ESC  |  !  |  @  |   #  |   $   |   %   |   ^   |  |   &   |   *   |  (    |  )    |  -   |   +   |   `   |
  // |  TAB  |  Q  |  W  |   E  |   R   |   T   |   [   |  |   ]   |   Y   |  U    |  I    |  O   |   P   |   \   |
  // | SHIFT |  A  |  S  |   D  |   F   |   G   |   (   |  |   )   |   H   |  J    |  K    |  L   |   ;   |   '   |
  // |  CTRL |  Z  |  X  |   C  |   V   |   B   |       |  |       |   N   |  M    |  ,    |  .   |   /   | ENTER |
- //         | XXX | ALT |  GUI | ENTER | RAISE | LOWER |  | RAISE | LOWER | SPACE | BSPC  | UNDO |   DO  |
+ //         | XXX | ALT |  GUI | SPACE | RAISE | LSHFT |  | RAISE | LOWER | ENTER | BSPC  | UNDO |   DO  |
  //
              bindings = <
  &kp ESC    &kp EXCL &kp AT   &kp HASH &kp DOLLAR &kp PRCNT &kp CARET          &kp AMPS    &kp ASTRK &kp LPAR  &kp RPAR  &kp MINUS   &kp EQUAL   &kp GRAVE
@@ -58,7 +57,7 @@
  //               |     |      |      |      |        |  |       |      |       |       |      |       |       |
              bindings = <
  &bt BT_CLR   &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &kp F6          &kp F7   &kp F8     &kp F9    &kp F10  &kp F11   &kp F12   &trans
- &out OUT_TOG &trans       &trans       &trans       &trans       &trans       &trans          &trans    &trans    &trans    &kp UP   &trans    &trans    &trans
+ &out OUT_TOG &trans       &trans       &trans       &trans       &trans       &trans          &trans    &trans    &kp HOME  &kp UP   &kp END   &trans    &trans
  &trans       &trans       &trans       &trans       &trans       &trans       &trans          &trans    &trans    &kp LEFT  &kp DOWN &kp RIGHT &trans    &trans
  &trans       &trans       &trans       &trans       &trans       &trans                                 &trans    &trans    &trans    &trans    &trans    &trans
               &trans       &trans       &trans       &trans       &trans       &trans          &trans    &trans    &trans    &trans    &trans    &trans
